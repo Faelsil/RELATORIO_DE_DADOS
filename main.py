@@ -35,7 +35,6 @@ ticket_medio = (faturamento['Valor Final'] / qtdProduto['Quantidade']).to_frame(
 ticket_medio = ticket_medio.rename(columns={0: 'Ticket Médio'})
 #print(ticket_medio)
 
-{}
 def enviar_email():  
     corpo_email = f'''
     <h1><b>Relatorio de vendas</b></h1>
@@ -58,7 +57,7 @@ def enviar_email():
     msg['Subject'] = "Relatorio de vendas por loja"
     msg['From'] = 'rafaelsilva.ap94@gmail.com'
     msg['To'] = 'rafaelsilva.ap94@gmail.com'
-    password = 'p q x n q q n o g j v s x z e o' 
+    password = '' #Colocar sua senha gerada
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(corpo_email)
 
